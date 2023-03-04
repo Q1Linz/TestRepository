@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>左侧导航栏</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{~/index.css}">
+</head>
+<body>
+<table class="providerTable" cellpadding="0" cellspacing="0" border="1px">
+    <tr class="firstTr">
+        <th >管理员编号</th>
+        <th >管理员姓名</th>
+        <th >管理员密码</th>
+    </tr>
+    <div th:each="admin : ${admins}">
+        <tr>
+            <td >[[${admin.id}]]</td>
+            <td>[[${admin.name}]]</td>
+            <td>[[${admin.password}]]</td>
+        </tr>
+    </div>
+
+</table>
+
+</body>
+</html>
